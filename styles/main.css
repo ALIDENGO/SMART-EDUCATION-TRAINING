@@ -28,9 +28,6 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     color: var(--text-primary);
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
     touch-action: manipulation;
 }
 
@@ -97,6 +94,8 @@ body {
     gap: 8px;
     font-size: 14px;
     color: var(--text-primary);
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .nav-btn .icon {
@@ -162,6 +161,8 @@ body {
 .interactive {
     cursor: pointer;
     transition: all var(--transition-speed);
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .interactive:hover {

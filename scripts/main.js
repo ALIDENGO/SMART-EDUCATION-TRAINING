@@ -4,6 +4,16 @@
  */
 
 // ===================================
+// Constants
+// ===================================
+const CONSTANTS = {
+    QUIZ_TOTAL_QUESTIONS: 10,
+    SCREENS: ['home', 'lessons', 'exercises', 'quiz', 'resources'],
+    NOTIFICATION_DURATION: 3000,
+    TOUCH_FEEDBACK_DURATION: 300
+};
+
+// ===================================
 // Global State Management
 // ===================================
 const AppState = {
@@ -121,7 +131,7 @@ function showTouchFeedback(x, y) {
     
     setTimeout(() => {
         feedback.classList.remove('active');
-    }, 300);
+    }, CONSTANTS.TOUCH_FEEDBACK_DURATION);
 }
 
 // ===================================
@@ -237,17 +247,17 @@ function initializeQuizScreen() {
 function navigateQuiz(direction) {
     const newQuestion = AppState.currentQuestion + direction;
     
-    if (newQuestion >= 0 && newQuestion < 10) {
+    if (newQuestion >= 0 && newQuestion < CONSTANTS.QUIZ_TOTAL_QUESTIONS) {
         AppState.currentQuestion = newQuestion;
         console.log(`Navigating to question ${newQuestion + 1}`);
         
         // Update question counter
         const counter = document.querySelector('.question-counter');
         if (counter) {
-            counter.textContent = `${newQuestion + 1} / 10`;
+            counter.textContent = `${newQuestion + 1} / ${CONSTANTS.QUIZ_TOTAL_QUESTIONS}`;
         }
         
-        showNotification(`Question ${newQuestion + 1} de 10`, 'info');
+        showNotification(`Question ${newQuestion + 1} de ${CONSTANTS.QUIZ_TOTAL_QUESTIONS}`, 'info');
     }
 }
 
@@ -304,7 +314,7 @@ function showNotification(message, type = 'info') {
         setTimeout(() => {
             document.body.removeChild(notification);
         }, 300);
-    }, 3000);
+    }, CONSTANTS.NOTIFICATION_DURATION);
 }
 
 // ===================================
@@ -353,10 +363,9 @@ document.addEventListener('keydown', function(e) {
     
     // Number keys for screen navigation (1-5)
     if (e.key >= '1' && e.key <= '5') {
-        const screens = ['home', 'lessons', 'exercises', 'quiz', 'resources'];
         const screenIndex = parseInt(e.key) - 1;
-        if (screens[screenIndex]) {
-            switchScreen(screens[screenIndex]);
+        if (CONSTANTS.SCREENS[screenIndex]) {
+            switchScreen(CONSTANTS.SCREENS[screenIndex]);
         }
     }
 });

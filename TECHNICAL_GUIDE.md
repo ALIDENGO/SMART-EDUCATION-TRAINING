@@ -312,10 +312,10 @@ console.log(AppState);
 
 ### Taille des Fichiers
 
-- `index.html`: ~9 KB
-- `styles/main.css`: ~11 KB
-- `scripts/main.js`: ~11 KB
-- **Total**: ~31 KB (non compressé)
+- `index.html`: ~9.4 KB
+- `styles/main.css`: ~11.4 KB
+- `scripts/main.js`: ~11.5 KB
+- **Total**: ~32 KB (non compressé)
 
 ### Performance Attendue
 
