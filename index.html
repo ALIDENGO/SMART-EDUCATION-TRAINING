@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Education - Écrans Interactifs</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Smart Education Training</h1>
+            <p class="subtitle">Plateforme d'Écrans Interactifs</p>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav class="navigation">
+            <button class="nav-btn active" data-screen="home">
+                <span class="icon">🏠</span>
+                <span class="label">Accueil</span>
+            </button>
+            <button class="nav-btn" data-screen="lessons">
+                <span class="icon">📚</span>
+                <span class="label">Leçons</span>
+            </button>
+            <button class="nav-btn" data-screen="exercises">
+                <span class="icon">✏️</span>
+                <span class="label">Exercices</span>
+            </button>
+            <button class="nav-btn" data-screen="quiz">
+                <span class="icon">🎯</span>
+                <span class="label">Quiz</span>
+            </button>
+            <button class="nav-btn" data-screen="resources">
+                <span class="icon">📖</span>
+                <span class="label">Ressources</span>
+            </button>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Home Screen -->
+            <section id="home-screen" class="screen active">
+                <h2>Bienvenue sur Smart Education</h2>
+                <div class="welcome-grid">
+                    <div class="welcome-card interactive" data-action="start-lesson">
+                        <div class="card-icon">📚</div>
+                        <h3>Commencer une leçon</h3>
+                        <p>Explorez nos modules d'apprentissage interactifs</p>
+                    </div>
+                    <div class="welcome-card interactive" data-action="practice">
+                        <div class="card-icon">✏️</div>
+                        <h3>S'exercer</h3>
+                        <p>Pratiquez vos compétences avec nos exercices</p>
+                    </div>
+                    <div class="welcome-card interactive" data-action="test">
+                        <div class="card-icon">🎯</div>
+                        <h3>Tester vos connaissances</h3>
+                        <p>Évaluez votre progression avec nos quiz</p>
+                    </div>
+                    <div class="welcome-card interactive" data-action="explore">
+                        <div class="card-icon">🔍</div>
+                        <h3>Explorer</h3>
+                        <p>Découvrez toutes nos ressources pédagogiques</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lessons Screen -->
+            <section id="lessons-screen" class="screen">
+                <h2>Leçons Interactives</h2>
+                <div class="lessons-grid">
+                    <div class="lesson-card interactive" data-lesson="math">
+                        <h3>Mathématiques</h3>
+                        <p>Algèbre, Géométrie, Calcul</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%"></div>
+                        </div>
+                        <span class="progress-text">60% complété</span>
+                    </div>
+                    <div class="lesson-card interactive" data-lesson="science">
+                        <h3>Sciences</h3>
+                        <p>Physique, Chimie, Biologie</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 40%"></div>
+                        </div>
+                        <span class="progress-text">40% complété</span>
+                    </div>
+                    <div class="lesson-card interactive" data-lesson="language">
+                        <h3>Langues</h3>
+                        <p>Français, Anglais, Arabe</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%"></div>
+                        </div>
+                        <span class="progress-text">75% complété</span>
+                    </div>
+                    <div class="lesson-card interactive" data-lesson="history">
+                        <h3>Histoire</h3>
+                        <p>Histoire mondiale et locale</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 30%"></div>
+                        </div>
+                        <span class="progress-text">30% complété</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Exercises Screen -->
+            <section id="exercises-screen" class="screen">
+                <h2>Exercices Pratiques</h2>
+                <div class="exercises-container">
+                    <div class="exercise-item interactive">
+                        <div class="exercise-header">
+                            <h3>Exercice 1: Additions</h3>
+                            <span class="difficulty easy">Facile</span>
+                        </div>
+                        <p>Résolvez 10 additions simples</p>
+                        <button class="btn-primary">Commencer</button>
+                    </div>
+                    <div class="exercise-item interactive">
+                        <div class="exercise-header">
+                            <h3>Exercice 2: Grammaire</h3>
+                            <span class="difficulty medium">Moyen</span>
+                        </div>
+                        <p>Conjugaison des verbes au présent</p>
+                        <button class="btn-primary">Commencer</button>
+                    </div>
+                    <div class="exercise-item interactive">
+                        <div class="exercise-header">
+                            <h3>Exercice 3: Sciences</h3>
+                            <span class="difficulty hard">Difficile</span>
+                        </div>
+                        <p>Expériences de chimie</p>
+                        <button class="btn-primary">Commencer</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quiz Screen -->
+            <section id="quiz-screen" class="screen">
+                <h2>Quiz Interactif</h2>
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h3>Question 1</h3>
+                        <p>Quelle est la capitale de la France?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option interactive" data-answer="a">A. Lyon</button>
+                            <button class="quiz-option interactive" data-answer="b">B. Paris</button>
+                            <button class="quiz-option interactive" data-answer="c">C. Marseille</button>
+                            <button class="quiz-option interactive" data-answer="d">D. Bordeaux</button>
+                        </div>
+                    </div>
+                    <div class="quiz-navigation">
+                        <button class="btn-secondary" id="prev-question">Précédent</button>
+                        <span class="question-counter">1 / 10</span>
+                        <button class="btn-primary" id="next-question">Suivant</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources Screen -->
+            <section id="resources-screen" class="screen">
+                <h2>Ressources Pédagogiques</h2>
+                <div class="resources-grid">
+                    <div class="resource-card interactive">
+                        <div class="resource-icon">📄</div>
+                        <h3>Documents PDF</h3>
+                        <p>Téléchargez nos guides et manuels</p>
+                    </div>
+                    <div class="resource-card interactive">
+                        <div class="resource-icon">🎥</div>
+                        <h3>Vidéos</h3>
+                        <p>Tutoriels vidéo et cours enregistrés</p>
+                    </div>
+                    <div class="resource-card interactive">
+                        <div class="resource-icon">🎧</div>
+                        <h3>Audio</h3>
+                        <p>Podcasts et leçons audio</p>
+                    </div>
+                    <div class="resource-card interactive">
+                        <div class="resource-icon">🔗</div>
+                        <h3>Liens Utiles</h3>
+                        <p>Ressources externes et références</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Smart Education Training - Tous droits réservés</p>
+        </footer>
+    </div>
+
+    <!-- Interactive Overlay for Touch Feedback -->
+    <div id="touch-feedback" class="touch-feedback"></div>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
